@@ -23,7 +23,9 @@
                            prefWidth="300"/>
 
                 <Button text="Rechercher"
+                        prefWidth="120"
                         onAction="#searchPokemon"/>
+
             </HBox>
         </VBox>
     </top>
