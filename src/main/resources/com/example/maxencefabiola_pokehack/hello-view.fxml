@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.maxencefabiola_pokehack.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.maxencefabiola_pokehack.controller.PokedexController">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="15" bottom="15" left="20" right="20"/>
+            </padding>
+
+            <Label text="Pokédex"
+                   style="-fx-font-size:30px; -fx-font-weight:bold;"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="searchField"
+                           promptText="Nom ou ID du Pokémon..."
+                           prefWidth="300"/>
+
+                <Button text="Rechercher"
+                        onAction="#searchPokemon"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets top="20"/>
+            </padding>
+
+            <ImageView fx:id="pokemonImage"
+                       fitWidth="180"
+                       fitHeight="180"
+                       preserveRatio="true"/>
+
+            <Label fx:id="nameLabel"
+                   text="Nom"
+                   style="-fx-font-size:24px; -fx-font-weight:bold;"/>
+
+            <Label fx:id="idLabel"
+                   text="ID : ---"/>
+
+            <Label fx:id="typeLabel"
+                   text="Type : ---"/>
+
+            <Label fx:id="heightLabel"
+                   text="Taille : ---"/>
+
+            <Label fx:id="weightLabel"
+                   text="Poids : ---"/>
+        </VBox>
+    </center>
+
+</BorderPane>
