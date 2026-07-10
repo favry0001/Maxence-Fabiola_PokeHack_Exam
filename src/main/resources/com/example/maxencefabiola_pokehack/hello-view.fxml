@@ -30,8 +30,10 @@
             </HBox>
 
             <Label fx:id="messageLabel"
-                   text=""
-                   style="-fx-text-fill:red;"/>
+                   text=" "
+                   style="-fx-text-fill:red; -fx-font-size:14px;"/>
+
+
         </VBox>
     </top>
 
