@@ -51,4 +51,15 @@ public class PokedexController {
 
         // Le backend sera branché ici plus tard.
     }
+
+    @FXML
+    private void initialize() {
+        deleteButton.setDisable(true);
+
+        pokemonList.getSelectionModel().selectedItemProperty().addListener(
+                (observable, ancienPokemon, nouveauPokemon) -> {
+                    deleteButton.setDisable(nouveauPokemon == null);
+                }
+        );
+    }
 }
