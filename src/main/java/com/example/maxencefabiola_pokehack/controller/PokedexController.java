@@ -45,7 +45,14 @@ public class PokedexController {
     @FXML
     private void searchPokemon() {
 
-        String recherche = searchField.getText();
+        String recherche = searchField.getText().trim();
+
+        if (recherche.isEmpty()) {
+            messageLabel.setText("Veuillez entrer un nom ou un ID.");
+            return;
+        }
+
+        messageLabel.setText("");
 
         System.out.println("Recherche : " + recherche);
 
