@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 
 public class PokedexController {
 
@@ -27,6 +29,18 @@ public class PokedexController {
 
     @FXML
     private Label weightLabel;
+
+    @FXML
+    private Label messageLabel;
+
+    @FXML
+    private ListView<String> pokemonList;
+
+    @FXML
+    private Label counterLabel;
+
+    @FXML
+    private Button deleteButton;
 
     @FXML
     private void searchPokemon() {
