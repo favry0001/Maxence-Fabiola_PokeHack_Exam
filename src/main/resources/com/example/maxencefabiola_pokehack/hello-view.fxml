@@ -8,48 +8,50 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.maxencefabiola_pokehack.controller.PokedexController"
             stylesheets="@pokedex.css"
-            prefWidth="850"
-            prefHeight="650">
+            prefWidth="1000"
+            prefHeight="700">
 
     <top>
-        <VBox spacing="10" alignment="CENTER">
+        <VBox spacing="14" alignment="CENTER">
             <padding>
-                <Insets top="15" bottom="15" left="20" right="20"/>
+                <Insets top="25" bottom="20" left="20" right="20"/>
             </padding>
 
             <Label text="Pokédex"
                    styleClass="title-label"/>
 
-            <HBox spacing="10" alignment="CENTER">
-
+            <HBox spacing="14" alignment="CENTER">
                 <TextField fx:id="searchField"
+                           styleClass="search-field"
                            promptText="Nom ou ID du Pokémon..."
-                           prefWidth="300"
-                           styleClass="search-field"/>
+                           prefWidth="380"/>
 
                 <Button text="Rechercher"
-                        prefWidth="120"
                         styleClass="search-button"
                         onAction="#searchPokemon"/>
-
             </HBox>
 
             <Label fx:id="messageLabel"
                    text=""
                    styleClass="message-label"/>
-
         </VBox>
     </top>
 
     <center>
+        <HBox spacing="45" alignment="CENTER">
+            <padding>
+                <Insets top="15" bottom="30" left="40" right="40"/>
+            </padding>
 
-        <HBox spacing="60" alignment="CENTER">
-
-            <VBox spacing="12" alignment="CENTER" styleClass="info-card">
+            <VBox spacing="14"
+                  alignment="CENTER"
+                  prefWidth="300"
+                  prefHeight="470"
+                  styleClass="info-card">
 
                 <ImageView fx:id="pokemonImage"
-                           fitWidth="180"
-                           fitHeight="180"
+                           fitWidth="190"
+                           fitHeight="190"
                            preserveRatio="true"/>
 
                 <Label fx:id="nameLabel"
@@ -75,26 +77,25 @@
                 <Button fx:id="deleteButton"
                         text="Supprimer"
                         styleClass="delete-button"/>
-
             </VBox>
 
-            <VBox spacing="10" styleClass="list-card">
+            <VBox spacing="14"
+                  prefWidth="430"
+                  prefHeight="470"
+                  styleClass="list-card">
 
                 <Label text="Pokémon capturés"
                        styleClass="section-title"/>
 
                 <ListView fx:id="pokemonList"
-                          prefWidth="300"
-                          prefHeight="350"/>
+                          prefHeight="370"
+                          styleClass="pokemon-list"/>
 
                 <Label fx:id="counterLabel"
                        text="0 Pokémon capturé"
-                       styleClass="info-label"/>
-
+                       styleClass="counter-label"/>
             </VBox>
-
         </HBox>
-
     </center>
 
 </BorderPane>

@@ -1,78 +1,94 @@
-.root {
-    -fx-background-color: #f4f6fb;
-    -fx-font-family: "Arial";
+root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: linear-gradient(to bottom right, #dbeafe, #eef2ff);
 }
 
 .title-label {
-    -fx-font-size: 34px;
+    -fx-font-size: 40px;
     -fx-font-weight: bold;
-    -fx-text-fill: #20263a;
+    -fx-text-fill: #172554;
 }
 
 .search-field {
-    -fx-background-radius: 8px;
-    -fx-border-radius: 8px;
-    -fx-border-color: #c7cddd;
-    -fx-padding: 10px;
-    -fx-font-size: 14px;
+    -fx-background-color: white;
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 11px 15px;
+    -fx-font-size: 15px;
 }
 
 .search-button {
-    -fx-background-color: #e63946;
+    -fx-background-color: #dc2626;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-background-radius: 8px;
-    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-padding: 11px 25px;
 }
 
 .search-button:hover {
-    -fx-background-color: #c92f3c;
+    -fx-background-color: #b91c1c;
 }
 
-.info-card {
-    -fx-background-color: white;
-    -fx-background-radius: 15px;
-    -fx-padding: 25px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 15, 0, 0, 4);
-}
-
+.info-card,
 .list-card {
     -fx-background-color: white;
-    -fx-background-radius: 15px;
-    -fx-padding: 20px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 15, 0, 0, 4);
-}
-
-.section-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #20263a;
+    -fx-background-radius: 20px;
+    -fx-border-color: #c7d2fe;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-padding: 24px;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.28), 22, 0.2, 0, 7);
 }
 
 .pokemon-name {
-    -fx-font-size: 28px;
+    -fx-font-size: 29px;
     -fx-font-weight: bold;
-    -fx-text-fill: #20263a;
+    -fx-text-fill: #172554;
 }
 
 .info-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #1e293b;
+}
+
+.section-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #172554;
+}
+
+.pokemon-list {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #94a3b8;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.counter-label {
     -fx-font-size: 15px;
-    -fx-text-fill: #4d556b;
+    -fx-text-fill: #334155;
 }
 
 .delete-button {
-    -fx-background-color: #e63946;
+    -fx-background-color: #ef4444;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-background-radius: 8px;
-    -fx-cursor: hand;
+    -fx-background-radius: 9px;
+    -fx-padding: 9px 20px;
 }
 
 .delete-button:disabled {
-    -fx-opacity: 0.45;
+    -fx-opacity: 0.4;
 }
 
 .message-label {
-    -fx-text-fill: #d62828;
+    -fx-text-fill: #b91c1c;
     -fx-font-size: 14px;
+    -fx-font-weight: bold;
 }
+
+
