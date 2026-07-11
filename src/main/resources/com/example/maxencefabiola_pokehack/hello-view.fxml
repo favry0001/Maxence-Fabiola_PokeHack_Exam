@@ -74,9 +74,20 @@
                        text="Poids : ---"
                        styleClass="info-label"/>
 
+
+                <Button fx:id="captureButton"
+                        text="Capturer"
+                        styleClass="capture-button"
+                        onAction="#capturePokemon"/>
+
+
+
                 <Button fx:id="deleteButton"
                         text="Supprimer"
-                        styleClass="delete-button"/>
+                        styleClass="delete-button"
+                        onAction="#deletePokemon"/>
+
+
             </VBox>
 
             <VBox spacing="14"
